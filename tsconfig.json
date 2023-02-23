@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "module": "commonjs", // import/export
+        "target": "es2019",
+        "esModuleInterop": true, // Fazer a conversão dos módulos que ainda usa o require
+        "allowJs": true // se tiver arquivo de config com extensão js
+    },
+    // "include": ["src/**/*"],
+    // "exclude": ["node_modules", "**/*.spec.ts"]
+}
