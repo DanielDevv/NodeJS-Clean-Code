@@ -1,9 +1,13 @@
 import { SignUpController } from './signup'
 import { MissingParamError } from '../errors/missing-param-error'
 
+const makeSut = (): SignUpController => {
+    return new SignUpController()
+}
+
 describe('SignUp Controller', () => { // colocar o nome do componente que está testando
     test('Should return 400 if no name is provided', () => {
-        const sut = new SignUpController() // primeiro instanciar a classe de teste
+        const sut = makeSut() // primeiro instanciar a classe de teste
         const httpRequest = {
             body: {
                 email: 'any_email@mail.com',
